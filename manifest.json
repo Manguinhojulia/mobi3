@@ -1,0 +1,238 @@
+{
+  "background_color": "#ffffff",
+  "description": "Esse site vai te ajudar a organizar sua bagagem para viagens, independente do destino.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "mobil3.netlify",
+  "orientation": "portrait",
+  "scope": "/",
+  "short_name": "mobil3.netlify",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "type": "image/x-icon"
+    },
+
+    {
+      "src": "assets/img/icones/16.png",
+      "size": "16x16",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/20.png",
+      "size": "20x20",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/29.png",
+      "size": "29x29",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/32.png",
+      "size": "32x32",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/40.png",
+      "size": "40x40",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/48.png",
+      "size": "48x48",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/50.png",
+      "size": "50x50",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/55.png",
+      "size": "55x55",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/57.png",
+      "size": "57x57",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/58.png",
+      "size": "58x58",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/60.png",
+      "size": "60x60",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/64.png",
+      "size": "64x64",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/66.png",
+      "size": "66x66",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/72.png",
+      "size": "72x72",
+      "type": "image/png"
+    },
+    
+    {
+      "src": "assets/img/icones/76.png",
+      "size": "76x76",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/80.png",
+      "size": "80x80",
+      "type": "image/png"
+    },
+    
+    {
+      "src": "assets/img/icones/87.png",
+      "size": "87x87",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/88.png",
+      "size": "88x88",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/92.png",
+      "size": "92x92",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/100.png",
+      "size": "100x100",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/102.png",
+      "size": "102x102",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/114.png",
+      "size": "114x114",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/120.png",
+      "size": "120x120",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/128.png",
+      "size": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/icones/144.png",
+      "size": "144x144",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/152.png",
+      "size": "152x152",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/167.png",
+      "size": "167x167",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/172.png",
+      "size": "172x172",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/180.png",
+      "size": "180x180",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/196.png",
+      "size": "196x196",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/216.png",
+      "size": "216x216",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/256.png",
+      "size": "256x256",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/512.png",
+      "size": "512x512",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/1024.png",
+      "size": "1024x1024",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/appstore.png",
+      "size": "1024x1024",
+      "type": "image/png"
+    },
+
+    {
+      "src": "assets/img/icones/playstore.png",
+      "size": "512x512",
+      "type": "image/png"
+    }
+
+
+  ],
+  "shortcuts": []
+}
