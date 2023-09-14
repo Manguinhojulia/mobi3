@@ -211,8 +211,7 @@
     {
       "src": "assets/img/icones/512.png",
       "size": "512x512",
-      "type": "image/png",
-      "purpose":"any maskable"
+      "type": "image/png"
     },
 
     {
