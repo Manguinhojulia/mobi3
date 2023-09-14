@@ -163,7 +163,8 @@
     {
       "src": "assets/img/icones/144.png",
       "size": "144x144",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"any maskable"
     },
 
     {
