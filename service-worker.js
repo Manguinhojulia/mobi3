@@ -1,88 +1,55 @@
-// This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
+var cacheName = 'pwaTeste+-v1.0';
 
-const CACHE = "pwabuilder-offline-page";
+self.addEventListener('install', event => {
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+  self.skipWaiting();
 
-// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "ToDo-replace-this-name.html";
+  event.waitUntil(
+    caches.open(cacheName)
+      .then(cache => cache.addAll([
 
-self.addEventListener("message", (event) => {
-  if (event.data && event.data.type === "SKIP_WAITING") {
+        './index.html',
+        './js/scripts.js',
+        './css/styles.css',
+        './assests/img/portifolio/5.jpg',
+        './assests/img/portifolio/174.-Inverno.jpg',
+        './assests/img/portifolio/2022.07.25-washington-monument-orange-leaves-istock-matt-anderson-600x450-1.jpg',
+        './assests/img/portifolio/depositphotos_1526401-stock-photo-winter-holiday-house.jpg',
+        './assests/img/portifolio/depositphotos_393260372-stock-photo-sunset-dramatic-sky-sea-tropical.jpg',
+        './assests/img/portifolio/papoula-da-calif_rnia_sortida_eschscholzia_californica_.jpg',
+        './assests/img/portifolio/tenis-esportivos-garimpo-viver-bem-dan-carlson-600x450-06dce820.jpg',
+        
+      ]))
+  );
+});
+
+self.addEventListener('message', function (event) {
+  if (event.data.action === 'skipWaiting') {
     self.skipWaiting();
   }
 });
 
-self.addEventListener('install', async (event) => {
-  event.waitUntil(
-    caches.open(CACHE)
-      .then((cache) => cache.add(offlineFallbackPage))
-  );
-});
+self.addEventListener('fetch', function (event) {
+  //Atualizacao internet
+  event.respondWith(async function () {
+    try {
+      return await fetch(event.request);
+    } catch (err) {
+      return caches.match(event.request);
+    }
+  }());
 
-if (workbox.navigationPreload.isSupported()) {
-  workbox.navigationPreload.enable();
-}
-
-workbox.routing.registerRoute(
-  new RegExp('/*'),
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: CACHE
-  })
-);
-
-self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        const preloadResp = await event.preloadResponse;
-
-        if (preloadResp) {
-          return preloadResp;
+  //Atualizacao cache
+  /*event.respondWith(
+    caches.match(event.request)
+      .then(function (response) {
+        if (response) {
+          return response;
         }
+        return fetch(event.request);
+      })
+  );*/
 
-        const networkResp = await fetch(event.request);
-        return networkResp;
-      } catch (error) {
 
-        const cache = await caches.open(CACHE);
-        const cachedResp = await cache.match(offlineFallbackPage);
-        return cachedResp;
-      }
-    })());
-  }
+
 });
-
-// Exemplo de registro de Periodic Sync (chamado a cada 24 horas):
-const periodSyncTag = 'periodic-sync-tag';
-const periodSyncOptions = {
-  tag: periodSyncTag,
-  minDelay: 24 * 60 * 60 * 1000, // 24 horas
-};
-
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === periodSyncTag) {
-    event.waitUntil(syncData()); // Chame uma função que realiza a sincronização de dados aqui
-  }
-});
-
-// Exemplo de registro de Background Sync:
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync-tag') {
-    event.waitUntil(syncData()); // Chame uma função que realiza a sincronização de dados aqui
-  }
-});
-
-// Função de exemplo para sincronização de dados:
-async function syncData() {
-  try {
-    // Realize a sincronização de dados com o servidor aqui
-    // Você pode fazer uma solicitação de rede e atualizar o cache, por exemplo
-    const response = await fetch('/api/sync');
-    const data = await response.json();
-
-    // Faça o que for necessário com os dados sincronizados
-  } catch (error) {
-    console.error('Erro na sincronização de dados:', error);
-  }
-}
