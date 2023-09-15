@@ -11,13 +11,7 @@ self.addEventListener('install', event => {
         './index.html',
         './js/scripts.js',
         './css/styles.css',
-        './assests/img/portifolio/5.jpg',
-        './assests/img/portifolio/174.-Inverno.jpg',
-        './assests/img/portifolio/2022.07.25-washington-monument-orange-leaves-istock-matt-anderson-600x450-1.jpg',
-        './assests/img/portifolio/depositphotos_1526401-stock-photo-winter-holiday-house.jpg',
-        './assests/img/portifolio/depositphotos_393260372-stock-photo-sunset-dramatic-sky-sea-tropical.jpg',
-        './assests/img/portifolio/papoula-da-calif_rnia_sortida_eschscholzia_californica_.jpg',
-        './assests/img/portifolio/tenis-esportivos-garimpo-viver-bem-dan-carlson-600x450-06dce820.jpg',
+      
         
       ]))
   );
@@ -49,5 +43,7 @@ self.addEventListener('fetch', function (event) {
         return fetch(event.request);
       })
   );*/
+
+
 
 });
